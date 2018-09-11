@@ -88,7 +88,7 @@ public class FlightController extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 
 		String action = request.getParameter("myaction");
-		String forward = "";
+		//String forward = "";
 
 		String id = request.getParameter("id_param");
 		String ppc_Id = request.getParameter("ppcId_param");

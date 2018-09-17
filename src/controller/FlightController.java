@@ -10,9 +10,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import model.Flight;
 import da.FlightDA;
 import da.IFlightDA;
+import model.Flight;
 
 /**
  * Servlet implementation class ActorController

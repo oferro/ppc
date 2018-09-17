@@ -3,6 +3,7 @@
 	<name>PPC</name>
 	<comment></comment>
 	<projects>
+		<project>Servers2</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

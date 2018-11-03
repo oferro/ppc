@@ -10,48 +10,48 @@
 	<form action="FlightController" method="post" name="frm">
 		<div>
 			<label for="id_param">ID (readonly)</label> <input readonly
-				type="text" name="id_param" value="<c:out  value="${tisa.id}"/>" />
+				type="text" name="id_param" value="<c:out  value="${tisa.fID}"/>" />
 		</div>
 
 		<div>
 			<label for="ppcId_param">PPC ID(Int)</label> <input type="text"
-				name="ppcId_param" value="<c:out  value="${tisa.ppcId}"/>" />
+				name="ppcId_param" value="<c:out  value="${tisa.flPPC}"/>" />
 		</div>
 
 		<div>
 			<label for="userId_param">User ID(Int)</label> <input type="text"
-				name="userId_param" value="<c:out  value="${tisa.userId}"/>" />
+				name="userId_param" value="<c:out  value="${tisa.fUser}"/>" />
 		</div>
 
 		<div>
 			<label for="date_param">Flight Date</label> <input type="text"
-				name="date_param"  placeholder="YYYY-MM-DD" value="<c:out  value="${tisa.date}"/>" />
+				name="date_param"  placeholder="YYYY-MM-DD" value="<c:out  value="${tisa.fDate}"/>" />
 		</div>
 
 		<div>
 			<label for="toHour_param">Time Start</label> <input type="text"
-				name="toHour_param" value="<c:out  value="${tisa.toHour}"/>" />
+				name="toHour_param" value="<c:out  value="${tisa.fToHour}"/>" />
 		</div>
 
 		<div>
 			<label for="lndHour_param">Time Landing</label> <input type="text"
-				name="lndHour_param" value="<c:out  value="${tisa.lndHour}"/>" />
+				name="lndHour_param" value="<c:out  value="${tisa.fLndHour}"/>" />
 		</div>
 
 		<div>
 			<label for="airField_param">Air Field</label> <input type="text"
-				name="airField_param" value="<c:out  value="${tisa.airField}"/>" />
+				name="airField_param" value="<c:out  value="${tisa.fAirField}"/>" />
 		</div>
 
 		<div>
 			<label for="fltRoute_param">Flight Route</label> <input type="text"
-				name="fltRoute_param" value="<c:out  value="${tisa.fltRoute}"/>" />
+				name="fltRoute_param" value="<c:out  value="${tisa.fFltRoute}"/>" />
 		</div>
 
 		<div>
 			<label for="update_param">Update Date (readonly)</label> <input
 				readonly type="text" name="update_param"
-				value="<c:out  value="${tisa.last_update}"/>" />
+				value="<c:out  value="${tisa.fTimeStemp}"/>" />
 		</div>
 
 		<input type="submit" value="update" name="myaction" />

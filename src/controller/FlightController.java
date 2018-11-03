@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import da.FlightResource;
-import model2.Flight;
+import model2.Flights;
 
 /**
  * Servlet implementation class FlightController
@@ -22,7 +22,7 @@ import model2.Flight;
 public class FlightController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
      
-	private static final String LIST_ACTORS="/flight.jsp";
+	private static final String LIST_ACTORS="/index.jsp";
 
 	private static final String FORM_STUDENT = "/formflight.jsp";
 	
@@ -48,8 +48,8 @@ public class FlightController extends HttpServlet {
 		if(action.equalsIgnoreCase("listOfFlights"))
 		{
 			forward=LIST_ACTORS;
-			List<Flight> list=flightResourse.getAll();
-			request.setAttribute("actorim", list);
+			List<Flights> list=flightResourse.getAll();
+			request.setAttribute("tisot", list);
 		}
 		
 		else if(action.equalsIgnoreCase("delete"))
@@ -58,16 +58,16 @@ public class FlightController extends HttpServlet {
 			String flightID=request.getParameter("id");
 			
 			flightResourse.delete(Integer.parseInt(flightID));
-			List<Flight> list=flightResourse.getAll();
+			List<Flights> list=flightResourse.getAll();
 			
-			request.setAttribute("actorim", list);
+			request.setAttribute("tisot", list);
 		}
 		else if(action.equalsIgnoreCase("update"))
 		{
 		  forward=FORM_STUDENT;
 		  String flightID=request.getParameter("id");
-		  Flight flight=flightResourse.getByID(Integer.parseInt(flightID));
-		  request.setAttribute("sahkan", flight);
+		  Flights flights=flightResourse.getByID(Integer.parseInt(flightID));
+		  request.setAttribute("tisa", flights);
 		  
 		}
 	 RequestDispatcher dispatcher=request.getRequestDispatcher(forward);
@@ -87,15 +87,15 @@ public class FlightController extends HttpServlet {
 		String l_name=request.getParameter("l_name_param");
 		String last_update=request.getParameter("update_param");
 
-		Flight flight=flightResourse.getByID(Integer.parseInt(id));
+		Flights flights=flightResourse.getByID(Integer.parseInt(id));
 		
 		//ToDo - update the filed to update from the jsp:
 //		flight.set(f_name);
 //        flight.setLastName(l_name);
 //        flight.setLastUpdate(Timestamp.valueOf(last_update));
 //        flightResourse.update(flight);
-        List<Flight> list=flightResourse.getAll();
-		request.setAttribute("actorim", list);
+        List<Flights> list=flightResourse.getAll();
+		request.setAttribute("tisot", list);
 		RequestDispatcher dispatcher=request.getRequestDispatcher(LIST_ACTORS);
 		dispatcher.forward(request, response);
 

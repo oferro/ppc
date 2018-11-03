@@ -2,7 +2,7 @@ package model;
 
 import java.sql.Timestamp;
 
-public class Flight {
+public class Flights {
 
 	private int id;
 	private int ppcId;
@@ -32,11 +32,11 @@ public class Flight {
 	}
 
 	// -------------------------------------- Constractur
-	public Flight() {
+	public Flights() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Flight(int id, int ppcId, int userId, String date, String toHour,
+	public Flights(int id, int ppcId, int userId, String date, String toHour,
 			String lndHour, String airField, String fltRoute,
 			Timestamp last_update) {
 		super();

@@ -155,19 +155,19 @@
 				<tbody>
 					<c:forEach items="${tisot}" var="t">
 						<tr>
-							<td><c:out value="${t.id}" /></td>
-							<td><c:out value="${t.ppcId}" /></td>
-							<td><c:out value="${t.userId}" /></td>
-							<td><c:out value="${t.date}" /></td>
-							<td><c:out value="${t.toHour}" /></td>
-							<td><c:out value="${t.lndHour}" /></td>
-							<td><c:out value="${t.airField}" /></td>
-							<td><c:out value="${t.fltRoute}" /></td>
-							<td><c:out value="${t.last_update}" /></td>
+					<td><c:out value="${t.fID}" /></td>
+					<td><c:out value="${t.flPPC}" /></td>
+					<td><c:out value="${t.fUser}" /></td>
+					<td><c:out value="${t.fDate}" /></td>
+					<td><c:out value="${t.fToHour}" /></td>
+					<td><c:out value="${t.fLndHour}" /></td>
+					<td><c:out value="${t.fAirField}" /></td>
+					<td><c:out value="${t.fFltRoute}" /></td>
+					<td><c:out value="${t.fTimeStemp}" /></td>
 							<td><a
-								href="FlightController?myaction=delete&id=<c:out  value="${t.id}"/>">מחיקה</a>
+								href="FlightController?myaction=delete&id=<c:out  value="${t.fID}"/>">מחיקה</a>
 								<a
-								href="FlightController?myaction=update&id=<c:out  value="${t.id}"/>">עדכון</a>
+								href="FlightController?myaction=update&id=<c:out  value="${t.fID}"/>">עדכון</a>
 							</td>
 
 						</tr>

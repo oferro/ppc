@@ -2,14 +2,14 @@ package da;
 
 import java.util.List;
 import javax.persistence.EntityManager;
-import model2.Flight;
+import model2.Flights;
 
-public class FlightResource extends ResourceBase<Flight> {
+public class FlightResource extends ResourceBase<Flights> {
 	private EntityManager em;
-	private List<Flight> listFlights;
+	private List<Flights> listFlights;
 
 	@Override
-	public void insert(Flight a) {
+	public void insert(Flights a) {
 		em = this.getEntityManager();
 		em.getTransaction().begin();
 		em.persist(a);
@@ -19,27 +19,27 @@ public class FlightResource extends ResourceBase<Flight> {
 	}
 
 	@Override
-	public List<Flight> getAll() {
+	public List<Flights> getAll() {
 		em = this.getEntityManager();
 		em.getTransaction().begin();
-		listFlights = em.createQuery("SELECT a FROM Flight a", Flight.class).getResultList();
+		listFlights = em.createQuery("SELECT a FROM Flights a", Flights.class).getResultList();
 		em.getTransaction().commit();
 		em.close();
 		return listFlights;
 	}
 
 	@Override
-	public Flight getByID(int id) {
+	public Flights getByID(int id) {
 		em = this.getEntityManager();
 		em.getTransaction().begin();
-		Flight flight = em.find(Flight.class, id);
+		Flights flights = em.find(Flights.class, id);
 		em.getTransaction().commit();
 		em.close();
-		return flight;
+		return flights;
 	}
 
 	@Override
-	public void update(Flight a) {
+	public void update(Flights a) {
 		em = this.getEntityManager();
 		em.getTransaction().begin();
 		em.merge(a);
@@ -52,8 +52,8 @@ public class FlightResource extends ResourceBase<Flight> {
 	public void delete(int id) {
 		em = this.getEntityManager();
 		em.getTransaction().begin();
-		Flight flight = em.find(Flight.class, id);
-		em.remove(flight);
+		Flights flights = em.find(Flights.class, id);
+		em.remove(flights);
 		em.getTransaction().commit();
 		em.close();
 

@@ -2,7 +2,7 @@ package model;
 
 import java.sql.Timestamp;
 
-public class User {
+public class Users {
 
 
 	private int id;
@@ -27,13 +27,13 @@ public class User {
 
 	// -------------------------------------- Constractur
 
-	public User() {
+	public Users() {
 		// TODO Auto-generated constructor stub
 	}
 
 	
 	
-	public User(int id, String user, String pw, String fName, String lName,
+	public Users(int id, String user, String pw, String fName, String lName,
 			String email, String phone, String qs, String ans,
 			Timestamp last_update) {
 		super();
